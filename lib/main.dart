@@ -1,8 +1,10 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName:'.env');
   runApp(const ChatApp());
 }
 
@@ -36,7 +38,7 @@ class _ChatScreenState extends State<ChatScreen> {
   bool _isLoading = false;
 
   Future<String> sendMessage(String message) async {
-    const String apiKey = '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';
+    String apiKey = dotenv.env['API_KEY']!;
     const String apiUrl =
         'https://api.openai.com/v1/engines/gpt-3.5-turbo-instruct/completions';
 
@@ -75,6 +77,8 @@ class _ChatScreenState extends State<ChatScreen> {
 
       return botResponse;
     } else {
+      print('API Request failed with status code: ${response.statusCode}');
+      print('API Response: ${response.body}');
       throw Exception('Failed to load response');
     }
   }
