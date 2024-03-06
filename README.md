@@ -9,4 +9,4 @@
 - Прокрутка чата до последнего сообщения после получения ответа от AI или отправки нового сообщения.
 - Возможность очистки истории чата.
   
-![Simulator Screenshot - iPhone 15 Pro - 2024-03-05 at 18 06 31 (1)](https://github.com/dariamafteuta/chat_bot/assets/107044001/9c0c7aa9-0e1d-42e2-abae-8af6d3033b26)
+![Simulator Screenshot - iPhone 15 Pro - 2024-03-06 at 11 52 29](https://github.com/dariamafteuta/chat_bot/assets/107044001/164937bd-266a-44d7-bc7f-8d367a3cca57)
